@@ -1,0 +1,3 @@
+[2026-01-09 14:12:52] Password reset link for admin@skillshare.com: http://localhost/SkillShare/reset_password.php?token=6a0f1e5a2b628c1278a8f213a01c0e8037c750f1d29abfa524d0efc84c27ee26
+[2026-01-09 14:13:50] Password reset link for admin@skillshare.com: http://localhost/SkillShare/reset_password.php?token=91c7948f6e447b1c6388955331528d21e89af7145438505bd6615763907628de
+[2026-01-09 14:15:47] Password reset link for admin@skillshare.com: http://localhost/SkillShare/reset_password.php?token=64a748906e40627ca7c14e5f0a17be318ba62bc0252f098958026d8f398fb595
