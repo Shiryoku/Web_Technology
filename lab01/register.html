@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CEMS — Register</title>
+</head>
+<body>
+  <header>
+        <div>
+            <div><img src="img/logo.jpg"></div>
+            <div><h1>Campus Event Management System (CEMS)</h1></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <main>
+    <section>
+      <h3>Register</h3>
+
+      <form >
+        <fieldset>
+          <legend>Category</legend>
+          <label>
+            <input type="radio" name="category" value="staff" required>
+            Staff
+          </label>
+          <label>
+            <input type="radio" name="category" value="student">
+            Student
+          </label>
+          <label>
+            <input type="radio" name="category" value="public">
+            Public
+          </label>
+        </fieldset>
+
+        <div>
+          <label for="name">Full Name</label><br>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Doe">
+        </div>
+
+        <div>
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.edu">
+        </div>
+
+        <div>
+          <label for="phone">Phone</label><br>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+60 12-345 6789">
+        </div>        
+
+        <div>
+          <label for="password">Password</label><br>
+          <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password" placeholder="Choose a password">
+        </div>
+
+        <div>
+            <label>Recommend event about:</label><br>
+            <input type="checkbox" name="event[]" value="workshop"> Workshop<br>
+            <input type="checkbox" name="event[]" value="seminar"> Seminar<br>
+            <input type="checkbox" name="event[]" value="competition"> Competition<br>
+            <input type="checkbox" name="event[]" value="festival"> Festival<br>
+            <input type="checkbox" name="event[]" value="sport"> Sport<br>
+            <input type="checkbox" name="event[]" value="course"> Course<br>
+        </div>
+
+        <div>
+          <button type="submit">Register</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p>&copy; Sam | BI23110062</p>
+  </footer>
+</body>
+</html>
