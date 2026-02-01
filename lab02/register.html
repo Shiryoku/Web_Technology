@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMS Registration</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="../lab02/img/logo.jpg" alt="CEMS Logo" class="logo" />
+            <h1>Campus Event Management System</h1>
+            <p>Create your account to start managing and participating in campus events.</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">CEMS</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html" class="active" aria-current="page">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="form-page">
+            <h3>Register</h3>
+            <form class="form-card">
+                <fieldset class="field-group">
+                    <legend>Category</legend>
+                    <label><input type="radio" name="category" value="staff" required> Staff</label>
+                    <label><input type="radio" name="category" value="student"> Student</label>
+                    <label><input type="radio" name="category" value="public"> Public</label>
+                </fieldset>
+                <div class="field">
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required autocomplete="fullname"
+                        placeholder="Wan Ahmad">
+                </div>
+                <div class="field">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required autocomplete="email"
+                        placeholder="you@example.com">
+                </div>
+                <div class="field">
+                    <label for="phone">Phone:</label><br>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+60 12-3456789">
+                </div>
+                <div class="field">
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required minlength="6"
+                        autocomplete="new-password" placeholder="Choose a strong password">
+                </div>
+                <div class="field">
+                    <p><strong>Recommend event about:</strong></p>
+                    <label><input type="checkbox" name="event[]" value="workshop"> Workshop</label><br>
+                    <label><input type="checkbox" name="event[]" value="seminar"> Seminar</label><br>
+                    <label><input type="checkbox" name="event[]" value="competition"> Competition</label><br>
+                    <label><input type="checkbox" name="event[]" value="festival"> Festival</label><br>
+                    <label><input type="checkbox" name="event[]" value="sport"> Sport</label><br>
+                    <label><input type="checkbox" name="event[]" value="course"> Course</label><br>
+                </div>
+                <div class="actions">
+                    <button type="submit">Register</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+<footer id="myfooter">
+    <hr>
+    <p>&copy;  <span id="y"></span>( WAN AHMAD NURULLAH | BI23110062 ) 2025 CEMS. All rights reserved.</p>
+</footer>
+<script> document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

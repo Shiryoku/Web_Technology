@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.header h1 {
+    color: #2c3e50;
+    margin: 0;
+}
+.header p {
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+}
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+button {
+    width: 100%;
+    padding: 0.75rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Page Specific Styles */
+/* Register Page Colors (Blue) */
+.page-register button {
+    background-color: #3498db;
+}
+.page-register button:hover {
+    background-color: #2980b9;
+}
+.page-register .footer a {
+    color: #3498db;
+}
+
+/* Login Page Colors (Green) */
+.page-login button {
+    background-color: #27ae60;
+}
+.page-login button:hover {
+    background-color: #219150;
+}
+.page-login .footer a {
+    color: #27ae60;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+.footer a {
+    text-decoration: none;
+}

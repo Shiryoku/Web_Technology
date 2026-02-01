@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMS v0.1</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="../lab02/img/logo.jpg" alt="CEMS Logo" class="logo" />
+            <h1>Campus Event Management System</h1>
+            <p>Organize, Manage, and Participate in Campus Events Seamlessly.</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">CEMS</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to CEMS</h2>
+            <p>This system helps you manage and explore upcoming campus events efficiently. Register or Login to get
+                started.</p>
+        </section>
+        <section class="listing">
+            <h3>Event Listings</h3>
+            <div>
+                <table id="filters">
+                    <tr>
+                        <td>All</td>
+                        <td>Filter 1</td>
+                        <td>Filter 2</td>
+                        <td>Filter 3</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table id="event_table">
+                    <tr>
+                        <td>Event Title 1<img src="../lab02/img/event1.jpg" alt="Event 1" style="width:100%;"></td>
+                        <td>Event Title 2<img src="../lab02/img/event2.jpg" alt="Event 2" style="width:100%;"></td>
+                        <td>Event Title 3<img src="../lab02/img/event3.jpg" alt="Event 3" style="width:100%;"></td>
+                    </tr>
+                    <tr>
+                        <td>img</td>
+                        <td>img</td>
+                        <td>img</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+
+<footer id="myfooter">
+    <hr>
+    <p>&copy;  <span id="y"></span>(WAN AHMAD NURULLAH | BI23110062 ) 2025 CEMS. All rights reserved.</p>
+</footer>
+<script> document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

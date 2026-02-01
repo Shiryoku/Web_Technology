@@ -1,0 +1,322 @@
+/* =========================================================
+   GLOBAL RESET & BASE STYLES
+   ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+/* =========================================================
+   HERO BANNER
+   ========================================================= */
+.hero {
+  background: url("../img/banner.jpg") no-repeat center center/cover;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .logo {
+  width: 100px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* =========================================================
+   NAVIGATION BAR
+   ========================================================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Brand / Logo */
+.brand {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  transition: background 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background: #f4f4f4;
+  color: #000;
+  border-radius: 4px;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* =========================================================
+   MAIN SECTION CONTENT
+   ========================================================= */
+main {
+  padding: 30px 10px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+/* Listing Section */
+.listing {
+  text-align: center;
+}
+
+.listing h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   FORM & SECTION CONTENT
+   ========================================================= */
+.section-content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-content h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Fieldset and Legend */
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: #444;
+  padding: 0 8px;
+}
+
+/* Input Groups */
+.section-content form div {
+  margin-bottom: 18px;
+}
+
+/* Labels */
+.section-content label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Input Fields */
+.section-content input[type="text"],
+.section-content input[type="email"],
+.section-content input[type="tel"],
+.section-content input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.section-content input:focus {
+  border-color: #0078d4;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 120, 212, 0.3);
+}
+
+/* Checkboxes and Radios */
+.section-content input[type="radio"],
+.section-content input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* Buttons */
+.section-content button,
+.section-content input[type="submit"] {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.section-content button:hover {
+  background-color: #005fa3;
+}
+
+/* =========================================================
+   RESPONSIVE FORM DESIGN
+   ========================================================= */
+@media (max-width: 600px) {
+  .section-content {
+    padding: 15px 20px;
+  }
+
+  .section-content form div {
+    margin-bottom: 15px;
+  }
+
+  fieldset {
+    padding: 10px;
+  }
+
+  .section-content button {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
+
+/* =========================================================
+   EVENT TABLE STYLES
+   ========================================================= */
+#event_table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#event_table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  vertical-align: top;
+}
+
+#event_table td:hover {
+  background-color: #C8B4BA;
+}
+
+/* =========================================================
+   RESPONSIVE TABLE DESIGN
+   ========================================================= */
+@media (max-width: 768px) {
+  #event_table,
+  #event_table tr,
+  #event_table td {
+    display: block;
+    width: 100%;
+  }
+
+  #event_table tr {
+    margin-bottom: 15px;
+  }
+
+  #event_table td img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Event Management System (CEMS)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<!-- Hero Banner Section -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="img/logo.jpg" alt="CEMS Logo" class="logo">
+      <h1>Campus Event Management System</h1>
+      <p>Organize, manage, and participate in campus events seamlessly</p>
+    </div>
+  </header>
+<!-- Navigation Section -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">CEMS</a>
+		  <div class="menu-icon" id="menu-icon">
+			<i class="fas fa-bars"></i> 
+		  </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <main> 
+    <section> 
+      <h3>Register</h3> 
+      <form action="" method="post" name="registration_form"> 
+        <fieldset> 
+          <legend>Category</legend> 
+          <label> 
+            <input type="radio" name="category" value="staff" required>Staff</label> 
+          <label> 
+            <input type="radio" name="category" value="student"> Student </label> 
+          <label> 
+            <input type="radio" name="category" value="public">Public</label> 
+        </fieldset> 
+ 
+        <div> 
+          <label for="name">Full Name</label><br> 
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Doe"> 
+        </div> 
+ 
+        <div> 
+          <label for="email">Email</label><br> 
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.edu"> 
+        </div> 
+ 
+        <div> 
+          <label for="phone">Phone</label><br> 
+6 
+ 
+          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+60 12345 6789"> 
+        </div>         
+ 
+        <div> 
+          <label for="password">Password</label><br> 
+          <input type="password" id="password" name="password" required minlength="6"autocomplete="new-password" placeholder="Choose a password"> 
+        </div> 
+ 
+        <div> 
+            <label>Recommend event about:</label><br> 
+            <input type="checkbox" name="event[]" value="workshop"> Workshop<br> 
+            <input type="checkbox" name="event[]" value="seminar"> Seminar<br> 
+            <input type="checkbox" name="event[]" value="competition"> Competition<br> 
+            <input type="checkbox" name="event[]" value="festival"> Festival<br> 
+            <input type="checkbox" name="event[]" value="sport"> Sport<br> 
+            <input type="checkbox" name="event[]" value="course"> Course<br> 
+        </div> 
+ 
+        <div> 
+          <button type="submit">Register</button> 
+          <button type="reset">Reset</button> 
+        </div> 
+      </form> 
+      <p id="output"></p>
+    </section> 
+  </main> 
+
+
+<footer id="myfooter">
+    <hr>
+    <p>&copy;  <span id="y"></span>( WAN AHMAD NURULLAH | BI23110062 ) 2025 CEMS. All rights reserved.</p>
+</footer>
+
+<script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+		// Toggle mobile menu
+		const menuIcon = document.getElementById('menu-icon');
+		const navLinks = document.getElementById('nav-links');
+		menuIcon.onclick = () => navLinks.classList.toggle('active');
+        document.addEventListener("DOMContentLoaded", () => { 
+const form = document.querySelector("form");     
+form.addEventListener("submit", function (e) { 
+const checkboxes = 
+document.querySelectorAll('input[name="event[]"]'); 
+let checked = false; 
+8 
+9 
+ 
+      // Check if at least one checkbox  selected 
+      for (const box of checkboxes) { 
+        if (box.checked) { 
+          checked = true; 
+          break; 
+        } 
+      } 
+ 
+      if (!checked) { 
+        e.preventDefault(); // Stop form submission 
+        alert("Please select at least one recommended event."); 
+        const output = document.getElementById("output"); 
+        output.style.color = "red"; 
+        output.textContent = `Please select at least one recommended event.`; 
+        return; 
+      } 
+ 
+      // Get name and email 
+    const name = document.getElementById("name").value.trim(); 
+    const email = document.getElementById("email").value.trim(); 
+ 
+    // Display thank you message 
+    const output = document.getElementById("output"); 
+    output.style.color = "green"; 
+    output.textContent = `Thank you ${name} (${email}) for registering.`; e.preventDefault(); // Stop form submission for this time 
+ 
+    }); 
+  });
+	</script></body>
+</html>

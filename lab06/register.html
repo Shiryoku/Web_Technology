@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - CEMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-register">
+    <div class="container">
+        <div class="header">
+            <h1>CEMS Registration</h1>
+            <p>Create your Campus Event Management Account</p>
+        </div>
+        <form action="register_action.php" method="POST">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Choose a secure password">
+            </div>
+            <button type="submit">Register Now</button>
+        </form>
+        <div class="footer">
+            Already have an account? <a href="login.html">Login here</a>
+        </div>
+    </div>
+</body>
+
+</html>

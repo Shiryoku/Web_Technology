@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CEMS — Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="img/logo.jpg" alt="CEMS Logo" class="logo" />
+            <h1>Campus Event Management System</h1>
+            <p>Login to your account to start managing and participating in campus events.</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">CEMS</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html" class="active" aria-current="page">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="form-page">
+            <h3>Login</h3>
+            <form class="form-card">
+                <div class="field">
+                    <label for="email">Email</label><br>
+                    <input id="email" name="email" type="email" placeholder="you@example.edu" required />
+                </div>
+                <div class="field">
+                    <label for="password">Password</label><br>
+                    <input id="password" name="password" type="password" placeholder="Your password" required />
+                </div>
+                <div class="actions">
+                    <button type="submit">Login</button>
+                    <button type="reset">Reset</button>
+                </div>
+                <p class="muted">
+                    New here? <a href="register.html">Create an account</a> ·
+                    <a href="forgot_password.html">Forgot password?</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+<footer id="myfooter">
+    <hr>
+    <p>&copy;  <span id="y"></span>(WAN AHMAD NURULLAH | BI23110062 ) 2025 CEMS. All rights reserved.</p>
+</footer>
+<script> document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

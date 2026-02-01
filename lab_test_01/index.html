@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - CEMS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+  <nav class="navbar"> 
+    <div class="nav-container">
+      <a href="index.html" class="brand">CEMS</a>
+      <div class="menu-icon" id="menu-icon">☰
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skills</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main>
+    <div class="profile-container"> 
+      <section class="profile-card about-me">
+        <h2>About Me</h2>
+        <img src="IMG/me.jpg" class="profile-pic">
+        <p>
+          Hello! I'm Wan Ahmad Nurullah, a passionate web technology student who
+          enjoys building interactive and responsive web applications using HTML,
+          CSS, and JavaScript. I love learning new design concepts and bringing
+          ideas to life through code. 
+        </p>
+      </section>
+
+      <section class="profile-card my-skills"> 
+        <h2>My Skills</h2>
+        
+        <table class="skills-table">
+          <thead>
+            <tr>
+              <th>Skill</th>
+              <th>Proficiency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML</td>
+             <td class="proficiency">★★★☆☆</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td class="proficiency">★★★☆☆</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td class="proficiency">★★★☆☆</td>
+            </tr>
+            <tr>
+              <td>PHP</td>
+              <td class="proficiency">★★★☆☆</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </main>
+
+  <footer> 
+    <p>&copy; 2025 WAN AHMAD NURULLAH | BI23110062</p>
+  </footer>
+  
+  <script>
+    // Toggle mobile menu
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+    menuIcon.onclick = () => navLinks.classList.toggle('active');
+  </script>
+</body>
+</html>
